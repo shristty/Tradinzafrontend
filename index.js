@@ -343,6 +343,10 @@ app.post("/newOrders", async (req, res) => {
   res.clearCookie("token");
   res.json("Logged out");});
 
+  app.get("/",(req,res)=>{
+    res.send("root");
+  })
+
 app.listen(PORT, () => {
   console.log("app is listening on port");
   mongoose.connect(uri);
